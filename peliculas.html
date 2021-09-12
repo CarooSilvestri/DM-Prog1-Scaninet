@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Listado de películas</title>
+	<link rel="stylesheet" type="text/css" href="styles/style_general.css">
+</head>
+
+<body>
+	
+	<header>
+		<div class="container-logo">
+			<a href="index.html"><img src="rsc/img/logo-01.jpg"></a>
+		</div>	
+			
+		<nav class="menu">
+			<ul>
+		 		<li class="li-header"><a class="link-menu" href="mejores_peliculas.html">Recomendadas del año</a></li>
+			   	<li class="li-header"><a class="link-menu" href="blog.html">Noticias</a></li>
+			   	<li class="li-header"><a class="link-menu" href="peliculas.html">Películas de todos los tiempos
+			   	</a></li>
+			   	<li class="li-header"><a class="link-menu" href="log_in.html">Sign in</a></li>
+		   	</ul>
+		</nav> 	
+	</header>
+
+	<div id="bg">
+		<div class="nombre-pagina">
+			<h1>Películas de todos los tiempos</h1>
+		</div>
+
+		<script type="text/javascript">
+			document.getElementById("bg").style =  'background-image: url("rsc/img/fondo4.jpg")';
+		</script>
+	</div>
+		
+	<section class="container-principal">
+		<div class="container-secundario">
+
+			<div class="container-clasificacion">
+				<div class="buscador">	
+					<label for="genero"><h4>Buscar: </h4></label>
+					<input for="buscar" placeholder="Busque una pelicula" class="label-busqueda-y-genero">
+				</div>
+
+				<hr>
+
+				<div class="clasificacion-genero">
+					<label class="label" for="genero"><h4>Género: </h4></label>
+						<select  class="label-busqueda-y-genero" name="genero">
+							<option value="">Seleccione una genero</option>
+							<option value="acc">Accion</option>
+							<option value="adv">Aventura</option>
+							<option value="com">Comedia</option>
+							<option value="rom">Romance</option>
+							<option value="ter">Terror</option>
+						</select> 
+				</div>
+
+				<hr>
+
+				<div class="clasificacion-anio">	
+					<h4> Año de lanzamiento: </h4>
+							<div class="anio">
+								<input type="checkbox" name="Año" id="70"/>
+								<label for="70">1970</label>
+							</div>
+							<div class="anio">
+								<input type="checkbox" name="Año" id="80"/>
+								<label for="80">1980</label>
+							</div>
+							<div class="anio">
+								<input type="checkbox" name="Año" id="90"/>
+								<label for="90">1990</label>
+							</div>
+							<div class="anio">
+								<input type="checkbox" name="Año" id="00"/>
+								<label for="00">2000</label>
+							</div>
+							<div class="anio">
+								<input type="checkbox" name="Año" id="10"/>
+								<label for="10">2010</label>
+							</div>
+				</div>
+
+				<hr>
+
+				<div class="mostrar-cantidad">
+					<h4> Mostrar: </h4>
+						<div class="cantidad">
+							<input type="radio" name="res" id="10"/>
+							<label for="10">10 resultados </label>
+						</div>
+						<div class="cantidad">
+							<input type="radio" name="res" id="25"/>
+							<label for="25">25 resultados </label>
+						</div>
+						<div class="cantidad">
+							<input type="radio" name="res" id="50"/>
+							<label for="50">50 resultados </label>
+						</div>
+						<div class="cantidad">
+							<input type="radio" name="res" id="100"/>
+							<label for="100">100 resultados </label>
+						</div>
+				</div>
+
+				<hr>
+
+				<div class="container-boton-buscar">
+					<input id="button" type="submit" value="Buscar">
+				</div>
+			</div>
+		
+			<div class="container-lista-peliculas">
+				<ul class="lista-peliculas">
+					<div class="peliculas1" id="guardianes" onclick="return show_hide_movie()">
+						Guardianes de la galaxia
+					</div>
+					<div class="peliculas2" id="pacific" onclick="return show_hide_movie2()">
+						Pacific Rim
+					</div>
+					<div class="peliculas1" id="avengers" onclick="return show_hide_movie()">
+						Avengers
+					</div>
+					<div class="peliculas2" id="spiderman" onclick="return show_hide_movie2()">
+						Spider-Man
+					</div>
+					<div class="peliculas1" id="aladdin" onclick="return show_hide_movie()">
+						Aladdin
+					</div>
+					<div class="peliculas2" id="capitana_marvel" onclick="return show_hide_movie2()">
+						Capitana Marvel
+					</div>
+					<div class="peliculas1" id="hulk" onclick="return show_hide_movie()">
+						El increíble Hulk
+					</div>
+					<div class="peliculas2" id="guardianes" onclick="return show_hide_movie2()">
+						Contratiempo
+					</div>
+					<div class="peliculas1" id="venom" onclick="return show_hide_movie()">
+						Venom
+					</div>
+					<div class="peliculas2" id="suicide_squad" onclick="return show_hide_movie2()">
+						Escuadron Suicida
+					</div>
+					<div class="peliculas1" id="destino" onclick="return show_hide_movie()">
+						Destino Final
+					</div>
+					<div class="peliculas2" id="titanic" onclick="return show_hide_movie2()">
+						Titanic
+					</div>
+					<div class="peliculas1" id="malefica" onclick="return show_hide_movie()">
+						Maléfica
+					</div>
+					<div class="peliculas2" id="guardianes" onclick="return show_hide_movie2()">
+						El camino
+					</div>
+					<div class="peliculas1" id="joker" onclick="return show_hide_movie()">
+						Joker
+					</div>
+					<div class="peliculas2" id="creed" onclick="return show_hide_movie2()">
+						Creed
+					</div>
+					<div class="peliculas1" id="descendientes" onclick="return show_hide_movie()">
+						Los descendientes
+					</div>
+					<div class="peliculas2" id="rapido_furioso" onclick="return show_hide_movie2()">
+						Rápido y Furioso
+					</div>
+					<div class="peliculas1" id="annabelle" onclick="return show_hide_movie()">
+						Annabelle
+					</div>
+					<div class="peliculas2" id="godzilla" onclick="return show_hide_movie2()">
+						Godzilla
+					</div>
+				</ul>
+
+				<div class="pagination">
+					<a href="#" id="nro-pag">&laquo;</a>
+					<a class="active" href="#" id="nro-pag">1</a>
+					<a href="#" id="nro-pag">2</a>
+					<a href="#" id="nro-pag">3</a>
+					<a href="#" id="nro-pag">4</a>
+					<a href="#" id="nro-pag">5</a>
+					<a href="#" id="nro-pag">6</a>
+				</div>
+			</div>			
+
+			
+			<div class="container-showposter">
+				<div class="poster-movie">
+				<img src="" id="imagen_poster">
+				<div class="container-boton-buscar">
+					<a href="reproductor.html">
+					<button id="button"> Ver más...</button></a>
+				</div></div>
+			</div>	
+		</section>
+	
+		<script type="text/javascript">			
+
+			function show_hide_movie() {
+
+				var showposter = document.getElementsByClassName("container-showposter")[0];
+				document.querySelectorAll('.peliculas1').forEach(item => {
+					
+					item.addEventListener('click', event => {
+
+						var nombre_peli = item.id;
+						var src = "rsc/listado_pelis/"+ nombre_peli + ".jpg";
+						document.getElementById("imagen_poster").src = src;
+
+					    window.localStorage.setItem("nombre_pelicula", document.getElementById(nombre_peli).textContent);
+					    window.localStorage.setItem("img", src);
+						
+						showposter.style.visibility = 'visible';
+					})
+				})
+			}
+			
+			function show_hide_movie2() {
+
+				var showposter = document.getElementsByClassName("container-showposter")[0];
+				document.querySelectorAll('.peliculas2').forEach(item => {
+					
+					item.addEventListener('click', event => {
+						
+						var nombre_peli = item.id;
+						var src = "rsc/listado_pelis/"+ nombre_peli + ".jpg";
+						document.getElementById("imagen_poster").src = src;
+
+					    window.localStorage.setItem("nombre_pelicula", document.getElementById(nombre_peli).textContent);
+					    window.localStorage.setItem("img", src);
+						
+						showposter.style.visibility = 'visible';
+					})
+				})
+			}
+		</script>
+
+		<footer>
+			<div id="content-footer">
+				<div class="redes">
+
+					<div class="img-logo">
+						<a href="index.html"><img src="rsc/img/logo-01.jpg" class="logo-footer"></a>
+					</div>
+
+					<div class="imgs-redes">
+						<a href="https://www.instagram.com/"><img src="rsc/img/instagram.png" class="red"></a>
+						<a href="https://www.facebook.com/"><img src="rsc/img/facebook.png" class="red"></a>
+						<a href="https://twitter.com/home"><img src="rsc/img/twitter.png" class="red"></a>
+					</div>
+
+				</div>
+				<div id="linea-vertical"></div>
+				<div class="mapa-del-sitio">
+					
+					<p><a class="link-menu" href="mejores_peliculas.html">Recomendadas del año</a></p>
+					<p><a class="link-menu" href="blog.html">Noticias</a></p>
+					<p><a class="link-menu" href="peliculas.html">Películas de todos los tiempos</a></p>
+					<p><a class="link-menu" href="log_in.html">Sign in</a></p>
+					
+				</div>
+			</div>
+		</footer>
+</body>
+</html>

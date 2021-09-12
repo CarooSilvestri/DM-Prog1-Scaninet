@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<meta charset="utf-8">
+	<title>Pelicula</title>
+	<link rel="stylesheet" type="text/css" href="styles/style_general.css">
+	
+</head>
+
+<body>
+
+	<header>
+		<div class="container-logo">
+			<a href="index.html"><img src="rsc/img/logo-01.jpg"></a>
+		</div>	
+			
+		<nav class="menu">
+			<ul>
+		 		<li class="li-header"><a class="link-menu" href="mejores_peliculas.html">Recomendadas del año</a></li>
+			   	<li class="li-header"><a class="link-menu" href="blog.html">Noticias</a></li>
+			   	<li class="li-header"><a class="link-menu" href="peliculas.html">Películas de todos los tiempos
+			   	</a></li>
+			   	<li class="li-header"><a class="link-menu" href="log_in.html">Sign in</a></li>
+		   	</ul>
+		</nav> 	
+	</header>
+	
+	<section class="container-principal">
+		<div class="container-secundario">
+		
+			<div class="titulo">
+				<div class="wrapper">
+					<h1 id="tit"></h1>
+				</div>
+
+				<script type="text/javascript">
+
+					document.getElementById('tit').innerHTML = localStorage.getItem('nombre_pelicula');
+
+				</script>
+				
+				<div class="valoracion">
+					<form>
+						<p class="clasificacion"> 
+							<input id="radio1" type="radio" name="estrellas" value="5" class="radio-estr">
+							<label for="radio1" class="estrellas">★</label>
+							<input id="radio2" type="radio" name="estrellas" value="4" class="radio-estr">
+							<label for="radio2" class="estrellas">★</label>
+							<input id="radio3" type="radio" name="estrellas" value="3" class="radio-estr">
+							<label for="radio3" class="estrellas">★</label>
+							<input id="radio4" type="radio" name="estrellas" value="2" class="radio-estr">
+							<label for="radio4" class="estrellas">★</label>
+							<input id="radio5" type="radio" name="estrellas" value="1" class="radio-estr">
+							<label for="radio5" class="estrellas">★</label>
+						</p>
+					</form>
+				</div>
+			</div>
+
+			<div class="ficha">
+				<div class="poster-peli">
+						<img id="poster" src="" >
+				</div>
+				<script type="text/javascript">
+					
+					document.getElementById('poster').src = localStorage.getItem('img');
+
+				</script>
+				<div class="texto">
+					<h2> Sinopsis</h2>
+					
+					<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+
+					<div class="mini-texto">
+					<p><b>Duracion:</b> 2h 2m </p>
+					<p><b>Estreno:</b> 3 de Octubre de 2019 </p></div><div class="mini-texto">
+					<p><b>Generos:</b> Drama/Pelicula de suspenso</p>
+					<p><b>Idiomas:</b> Latino; Español; Ingles</p></div>				
+					
+					<div class="content">
+						<a href="#videoStory" class="button more" id="videoLink">
+							<button>
+								Ver trailer
+							</button>
+						</a>
+
+   						<div id="videoStory" class="mfp-hide">
+				    		<iframe width="853" height="480" src="https://www.youtube.com/embed/oXoe3GWygq0?rel=0" frameborder="0" allowfullscreen></iframe>
+						</div>
+					</div>
+						
+					<br>
+					
+					<div class="grilla-actores"> <h2> Cast </h2>
+						<div class="contenedor-actor">
+							<img src="rsc/img/actor.jpg" width="100px">
+							<p>Actor 1</p>
+						</div>
+						<div class="contenedor-actor">
+							<img src="rsc/img/actor.jpg" width="100px">
+							<p>Actor 2</p>
+						</div>
+						<div class="contenedor-actor">
+							<img src="rsc/img/actor.jpg" width="100px">
+							<p>Actor 3</p>
+						</div>
+						<div class="contenedor-actor">
+							<img src="rsc/img/actor.jpg" width="100px">
+							<p>Actor 4</p>
+						</div>
+					</div>
+			</div>
+		</div>
+		</article>
+		</div>
+	</section>
+
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/magnific-popup.min.css" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/jquery.magnific-popup.min.js"></script>
+	<script>
+		$('#videoLink')
+			.magnificPopup({
+				type:'inline',
+				midClick: true,
+	  })
+	</script>
+	
+	<footer>
+		<div id="content-footer">
+			<div class="redes">
+
+				<div class="img-logo">
+					<a href="index.html"><img src="rsc/img/logo-01.jpg" class="logo-footer"></a>
+				</div>
+
+				<div class="imgs-redes">
+					<a href="https://www.instagram.com/"><img src="rsc/img/instagram.png" class="red"></a>
+					<a href="https://www.facebook.com/"><img src="rsc/img/facebook.png" class="red"></a>
+					<a href="https://twitter.com/home"><img src="rsc/img/twitter.png" class="red"></a>
+				</div>
+
+			</div>
+			<div id="linea-vertical"></div>
+			<div class="mapa-del-sitio">
+				
+				<p><a class="link-menu" href="mejores_peliculas.html">Recomendadas del año</a></p>
+				<p><a class="link-menu" href="blog.html">Noticias</a></p>
+				<p><a class="link-menu" href="peliculas.html">Películas de todos los tiempos</a></p>
+				<p><a class="link-menu" href="log_in.html">Sign in</a></p>
+				
+			</div>
+		</div>
+	</footer> 
+	
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	
+	<title>Mejores películas del año</title>
+
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="styles/style_general.css">
+
+</head>
+
+<body>
+
+	<header>
+		<div class="container-logo">
+			<a href="index.html"><img src="rsc/img/logo-01.jpg"></a>
+		</div>	
+			
+		<nav class="menu">
+			<ul>
+		 		<li class="li-header"><a class="link-menu" href="mejores_peliculas.html">Recomendadas del año</a></li>
+			   	<li class="li-header"><a class="link-menu" href="blog.html">Noticias</a></li>
+			   	<li class="li-header"><a class="link-menu" href="peliculas.html">Películas de todos los tiempos
+			   	</a></li>
+			   	<li class="li-header"><a class="link-menu" href="log_in.html">Sign in</a></li>
+		   	</ul>
+		</nav> 	
+	</header>
+
+	<div id="bg">
+		<div class="nombre-pagina">
+			<h1>Mejores 10 peliculas del año</h1>
+		</div>
+
+		<script type="text/javascript">
+			document.getElementById("bg").style =  'background-image: url("rsc/img/fondo4.jpg")';
+		</script>
+	</div>
+		
+	<div class="container-principal">
+		<div class="container-secundario">
+
+			<div class="poster-pelicula">
+				<div class="cont-img">
+					<a href="reproductor.html" onclick="return pass_movie()">
+						<p class="n-peli" id="avengers">Avengers: Endgame</p>
+						<img class="imagen-pelicula" src="rsc/top_10_peliculas/avengers.jpg">
+					</a>
+				</div>
+			</div>
+
+			<div class="poster-pelicula">
+				<div class="cont-img">
+					<a href="reproductor.html" onclick="return pass_movie()">
+						<p class="n-peli" id="joker">Guason</p>
+						<img class="imagen-pelicula" src="rsc/top_10_peliculas/joker.jpg">
+					</a>	
+				</div> 
+			</div>
+
+			<div class="poster-pelicula">
+				<div class="cont-img">
+					<a href="reproductor.html" onclick="return pass_movie()">
+						<p class="n-peli" id="glass">Glass</p>
+						<img class="imagen-pelicula" src="rsc/top_10_peliculas/glass.jpg">
+					</a>
+				</div>
+			</div>
+			
+			<div class="poster-pelicula">
+				<div class="cont-img">
+					<a href="reproductor.html" onclick="return pass_movie()">
+						<p class="n-peli">Star Wars: episodio IX</p>
+						<img class="imagen-pelicula" src="rsc/top_10_peliculas/star_wars.jpg">
+					</a>
+				</div>
+			</div>
+				
+			<div class="poster-pelicula">	
+				<div class="cont-img">
+					<a href="reproductor.html" onclick="return pass_movie()">
+						<p class="n-peli" id="terminator">Terminator: destino oculto</p>
+						<img class="imagen-pelicula" src="rsc/top_10_peliculas/terminator.jpg">
+					</a>
+				</div>
+			</div>
+				
+			<div class="poster-pelicula">		
+				<div class="cont-img" >
+					<a href="reproductor.html" onclick="return pass_movie()">
+						<p class="n-peli">Habia una vez</p>
+						<img class="imagen-pelicula" src="rsc/top_10_peliculas/habia_una_vez.jpg">
+					</a>
+				</div>
+			</div>
+
+			<div class="poster-pelicula">
+				<div class="cont-img">
+					<a href="reproductor.html" onclick="return pass_movie()">
+						<p class="n-peli" id="toy_story">Toy Story 4</p>
+						<img class="imagen-pelicula" src="rsc/top_10_peliculas/toy_story.jpg">
+					</a>
+				</div>
+			</div>
+
+			<div class="poster-pelicula">
+				<div class="cont-img">
+					<a href="reproductor.html" onclick="return pass_movie()">
+						<p class="n-peli" id="capitana_marvel">Capitana marvel</p>
+						<img src="rsc/top_10_peliculas/capitana_marvel.jpg" class="imagen-pelicula">
+					</a>
+				</div>
+			</div>
+
+			<div class="poster-pelicula">
+				<div class="cont-img">
+					<a href="reproductor.html" onclick="return pass_movie()">
+						<p class="n-peli" id="it">It: capitulo dos</p>
+						<img class="imagen-pelicula" src="rsc/top_10_peliculas/it.jpg">
+					</a>
+				</div>
+			</div>
+			
+			<div class="poster-pelicula">
+				<div class="cont-img">
+					<a href="reproductor.html" onclick="return pass_movie()">
+						<p class="n-peli" id="aladdin">Aladdin</p>
+						<img class="imagen-pelicula" src="rsc/top_10_peliculas/aladdin.jpg">
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>	
+	
+	<script type="text/javascript">
+		
+		function pass_movie() {
+
+				document.querySelectorAll('.cont-img').forEach(item => {
+					
+					item.addEventListener('click', event => {
+						
+						var nombre_peli = item.getElementsByTagName('p')[0].id;
+						var nombre_peli_pasar = item.getElementsByTagName('p')[0].innerText;
+
+						var src = "rsc/top_10_peliculas/"+ nombre_peli + ".jpg";
+
+					    window.localStorage.setItem("nombre_pelicula", nombre_peli_pasar);
+					    window.localStorage.setItem("img", src);
+					})
+				})
+			}
+	</script>
+
+	<footer>
+		<div id="content-footer">
+			<div class="redes">
+
+				<div class="img-logo">
+					<a href="index.html"><img src="rsc/img/logo-01.jpg" class="logo-footer"></a>
+				</div>
+
+				<div class="imgs-redes">
+					<a href="https://www.instagram.com/"><img src="rsc/img/instagram.png" class="red"></a>
+					<a href="https://www.facebook.com/"><img src="rsc/img/facebook.png" class="red"></a>
+					<a href="https://twitter.com/home"><img src="rsc/img/twitter.png" class="red"></a>
+				</div>
+
+			</div>
+			<div id="linea-vertical"></div>
+			<div class="mapa-del-sitio">
+				
+				<p><a class="link-menu" href="mejores_peliculas.html">Recomendadas del año</a></p>
+				<p><a class="link-menu" href="blog.html">Noticias</a></p>
+				<p><a class="link-menu" href="peliculas.html">Películas de todos los tiempos</a></p>
+				<p><a class="link-menu" href="log_in.html">Sign in</a></p>
+				
+			</div>
+		</div>
+	</footer> 
+			
+</body>
+</html>
